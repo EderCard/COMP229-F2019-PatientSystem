@@ -1,0 +1,52 @@
+﻿@model Patient
+@{
+    ViewBag.Title = "Patient Registration Form";
+}
+    <h2>Patient Registration Form</h2>
+    <form asp-action="AddPatient" method="post">
+        <table>
+            <tr>
+                <td><label asp-for="Name">Patient Name:</label></td>
+                <td><input asp-for="Name" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Age">Age:</label></td>
+                <td><input asp-for="Age" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Address">Address:</label></td>
+                <td><input asp-for="Address" /></td>
+            </tr>
+            <tr>
+                <td><label asp-for="Occupation">Occupation:</label></td>
+                <td><input asp-for="Occupation" /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" asp-for="HasInsurance" /><label asp-for="HasInsurance">Has Insurance?</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" asp-for="HadOperation" /><label asp-for="HadOperation">Had Operation?</label></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label asp-for="MaritalStatus">Marital Status:</label></td>
+                <td>
+                    <select asp-for="MaritalStatus">
+                        <option value="">Choose an option</option>
+                        <option value="Married">Married</option>
+                        <option value="Divorced">Divorced</option>
+                        <option value="Widowed">Widowed</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Save</button>&nbsp;&nbsp;|&nbsp;&nbsp;<button type="reset">Cancel</button></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
