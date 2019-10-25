@@ -1,0 +1,70 @@
+﻿#allPage {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 2px;
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: ghostwhite;
+}
+
+p {
+    background-color: ghostwhite;
+    border-radius: 5px;
+    border-color: #ced4da;
+}
+
+footer {
+    padding: 2px;
+}
+
+#copyright {
+    font-size: x-small;
+    padding-left: 2px;
+}
+
+h1 {
+    padding: 2px;
+}
+
+.table {
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    font-size: 13px;
+    width: 100%;
+}
+
+
+.table thead th {
+    border: solid 1px #DDEEEE;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.table tbody td {
+    border: solid 1px #DDEEEE;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+
+}
+
+a{
+    text-decoration:none;
+    background-color:cornflowerblue;
+    color:white;
+    padding:10px;
+}
+    a:hover {
+        background-color: white;
+        color: cornflowerblue;
+    }
+
+button {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 10px;
+}
+
+    button:hover {
+        background-color: white;
+        color: cornflowerblue;
+    }

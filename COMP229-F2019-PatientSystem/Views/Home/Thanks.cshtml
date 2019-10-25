@@ -1,7 +1,12 @@
 ﻿@model Patient
 @{
-    ViewData["Title"] = "Thanks";
+    ViewBag.Title = "Thanks";
 }
 
-<h2>Thanks</h2>
-
+<header class="text-center">
+    <a asp-action="Index">Home</a>
+    <a asp-action="PatientRegistrationForm">Add Patient</a>
+    <a asp-action="PatientList">Patient List</a>
+</header>
+<h2>Thank You!</h2>
+<p><strong>@Model.Name</strong> has been succcessfully registered as <strong>@Model.Occupation</strong> on <strong>@Model.DateRegistration</strong></p>

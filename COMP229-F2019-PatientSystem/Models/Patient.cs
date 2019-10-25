@@ -14,6 +14,6 @@ namespace COMP229_F2019_PatientSystem.Models
         public bool HasInsurance { get; set; }
         public bool HadOperation { get; set; }
         public string MaritalStatus { get; set; }
-        public DateTime DateRegister { get; set; }
+        public DateTime DateRegistration { get; set; }
     }
 }

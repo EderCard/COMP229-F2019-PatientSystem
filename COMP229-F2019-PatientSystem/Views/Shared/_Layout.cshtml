@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/css/StyleSheet.css" />
+</head>
+<body>
+    <div id="allPage">
+        <header>
+            <table>
+                <tr>
+                    <td><img src="~/images/Logo.png"  width="70"/></td>
+                    <td><h1>Patient System</h1></td>
+                </tr>
+            </table>
+        </header>
+        @RenderBody()
+        <footer>
+            <p id="copyright">
+                &copy;&nbsp;&nbsp;Copyright Ederson Cardoso - Comp229 - Fall 2019 - Midterm Exercise
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

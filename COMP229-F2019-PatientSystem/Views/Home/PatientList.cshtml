@@ -1,3 +1,60 @@
-﻿@{
+﻿@model IEnumerable<Patient>
+@{
     ViewBag.Title = "Patient List";
 }
+    <header>
+        <a asp-action="Index">Home</a>
+        <a asp-action="PatientRegistrationForm">Add Patient</a>
+        <a asp-action="PatientList">Patient List</a>
+    </header>
+    <br />
+<h2>Registered Patients List</h2>
+<table class="table">
+    <thead >
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Address</td>
+            <td>Occupation</td>
+            <td>Has Insurance</td>
+            <td>Had Operation Before</td>
+            <td>Marital Status</td>
+            <td>Date Registration</td>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (Patient p in Model.OrderBy (i => i.Name))
+        {
+        <tr>
+            <td>@p.Name</td>
+            <td>@p.Age</td>
+            <td>@p.Address</td>
+            <td>@p.Occupation</td>
+            <td>
+                @if (p.HasInsurance == true)
+                {
+                    @: Yes
+                }
+                else
+                {
+                    @: No
+                }
+            </td>
+            <td>
+                @if (p.HadOperation == true)
+                {
+                    @: Yes
+                }
+                else
+                {
+                    @: No
+                }
+            </td>
+            <td>@p.MaritalStatus</td>
+            <td>@p.DateRegistration</td>
+        </tr>
+        }
+    </tbody>
+
+</table>
