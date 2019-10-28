@@ -22,7 +22,6 @@ namespace COMP229_F2019_PatientSystem.Controllers
         [HttpGet]
         public ViewResult PatientRegistrationForm()
         {
-            ViewBag.Date = DateTime.Now;
             return View();
         }
         /// <summary>
@@ -35,7 +34,6 @@ namespace COMP229_F2019_PatientSystem.Controllers
         {
             if (ModelState.IsValid)
             {
-                ViewBag.Date = DateTime.Now;
                 Repository.AddPatient(patient);
                 return View("Thanks", patient);
             }
@@ -51,7 +49,7 @@ namespace COMP229_F2019_PatientSystem.Controllers
         [HttpGet]
         public ViewResult PatientList()
         {
-            return View(Repository.PatientList);
+            return View(Repository.PatientList.OrderBy(p => p.Name));
         }
     }
 }

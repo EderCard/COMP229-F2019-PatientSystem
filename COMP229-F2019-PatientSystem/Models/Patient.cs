@@ -13,7 +13,7 @@ namespace COMP229_F2019_PatientSystem.Models
         public string Occupation { get; set; }
         public bool HasInsurance { get; set; }
         public bool HadOperation { get; set; }
-        public string MaritalStatus { get; set; }
-        public DateTime DateRegistration { get; set; }
+        public int MaritalStatus { get; set; }
+        public DateTime RegistrationDate { get; set; } = DateTime.Now; // default DateTime on patient creation
     }
 }

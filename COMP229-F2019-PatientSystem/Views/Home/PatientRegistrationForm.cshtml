@@ -6,7 +6,6 @@
 <h2>Patient Registration Form</h2>
 
 <form asp-action="PatientRegistrationForm" method="post">
-    <input type="hidden" asp-for="DateRegistration" value="@ViewBag.Date" />
     <table>
         <tr>
             <td><label asp-for="Name">Patient Name:</label></td>
@@ -37,10 +36,10 @@
             <td>
                 <select asp-for="MaritalStatus">
                     <option value="">Choose an option</option>
-                    <option value="Single">Single</option>
-                    <option value="Married">Married</option>
-                    <option value="Divorced">Divorced</option>
-                    <option value="Widowed">Widowed</option>
+                    <option value="1">Single</option>
+                    <option value="2">Married</option>
+                    <option value="3">Divorced</option>
+                    <option value="4">Widowed</option>
                 </select>
             </td>
         </tr>

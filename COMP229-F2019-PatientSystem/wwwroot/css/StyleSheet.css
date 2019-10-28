@@ -68,3 +68,7 @@ button {
         background-color: white;
         color: cornflowerblue;
     }
+
+.logo {
+    width: 70px;
+}

@@ -14,12 +14,12 @@
             <td>Has Insurance</td>
             <td>Had Operation Before</td>
             <td>Marital Status</td>
-            <td>Date Registration</td>
+            <td>Registration Date</td>
         </tr>
     </thead>
 
     <tbody>
-        @foreach (Patient p in Model.OrderBy (i => i.Name))
+        @foreach (Patient p in Model) 
         {
         <tr>
             <td>@p.Name</td>
@@ -37,17 +37,26 @@
                 }
             </td>
             <td>
-                @if (p.HadOperation == true)
-                {
-                    @: Yes
-                }
-                else
-                {
-                    @: No
-                }
+                @(p.HadOperation ? "Yes" : "No")
             </td>
-            <td>@p.MaritalStatus</td>
-            <td>@p.DateRegistration</td>
+            <td>
+                @switch (p.MaritalStatus)
+                 {
+                    case 1:
+                        @: Single
+                        break;
+                    case 2:
+                        @: Married
+                        break;
+                    case 3:
+                        @: Divorced
+                        break;
+                    case 4:
+                        @: Widowed
+                        break;
+                 }
+            </td>
+            <td>@p.RegistrationDate</td>
         </tr>
         }
     </tbody>

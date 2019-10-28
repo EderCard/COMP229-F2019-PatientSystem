@@ -19,8 +19,8 @@ namespace COMP229_F2019_PatientSystem.Models
                 Occupation = "Student",
                 HasInsurance = true,
                 HadOperation = false,
-                MaritalStatus = "Maried",
-                DateRegistration= new DateTime(2019,10,26,9,16,21)
+                MaritalStatus = 2,
+                RegistrationDate = new DateTime(2019,10,26,9,16,21)
            }
         };
 
